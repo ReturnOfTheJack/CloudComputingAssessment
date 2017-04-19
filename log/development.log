@@ -754,3 +754,988 @@ Processing by UsersController#index as HTML
 Completed 200 OK in 122ms (Views: 85.9ms | ActiveRecord: 1.0ms)
 
 
+Started GET "/" for ::1 at 2017-04-19 09:02:44 +0800
+Started GET "/" for ::1 at 2017-04-19 09:02:44 +0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PublicController#landing as HTML
+Processing by PublicController#landing as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering public/landing.html.erb within layouts/application
+  Rendering public/landing.html.erb within layouts/application
+  Rendered public/landing.html.erb within layouts/application (14.0ms)
+  Rendered public/landing.html.erb within layouts/application (13.0ms)
+Completed 500 Internal Server Error in 1460ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (can't add a new key into hash during iteration):
+    4:     <title>JackApp</title>
+    5:     <%= csrf_meta_tags %>
+    6: 
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    9:   </head>
+   10: 
+  
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb___960757220_51669940'
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.0ms)
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Completed 200 OK in 2685ms (Views: 2595.8ms | ActiveRecord: 2.0ms)
+
+
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.0ms)
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (12528.5ms)
+Started GET "/" for ::1 at 2017-04-19 09:06:26 +0800
+Processing by PublicController#landing as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering public/landing.html.erb within layouts/application
+  Rendered public/landing.html.erb within layouts/application (0.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Completed 200 OK in 284ms (Views: 273.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2017-04-19 09:06:50 +0800
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (65.3ms)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Completed 200 OK in 157ms (Views: 149.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2017-04-19 09:06:59 +0800
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"25zIaSaStGmsdtD/Z1Yv3ElXTNcJ30TmCOh/kpGHmnD6wYsskEOeCVsikufhMS761urgxl/ARf3SuqZFHXDczQ==", "session"=>{"email"=>"someemail2@example.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "someemail2@example.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 83ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2017-04-19 09:06:59 +0800
+Processing by PublicController#landing as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering public/landing.html.erb within layouts/application
+  Rendered public/landing.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 88ms (Views: 77.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-04-19 09:09:33 +0800
+Processing by PublicController#landing as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering public/landing.html.erb within layouts/application
+  Rendered public/landing.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 92ms (Views: 77.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-04-19 09:09:36 +0800
+Processing by PublicController#landing as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering public/landing.html.erb within layouts/application
+  Rendered public/landing.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 88ms (Views: 76.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-04-19 09:12:17 +0800
+Processing by PublicController#landing as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering public/landing.html.erb within layouts/application
+  Rendered public/landing.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 159ms (Views: 147.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-04-19 09:12:36 +0800
+Processing by PublicController#landing as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering public/landing.html.erb within layouts/application
+  Rendered public/landing.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 157ms (Views: 139.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2017-04-19 09:12:36 +0800
+Processing by PublicController#landing as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering public/landing.html.erb within layouts/application
+  Rendered public/landing.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 91ms (Views: 75.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-04-19 09:12:40 +0800
+Processing by PublicController#landing as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering public/landing.html.erb within layouts/application
+  Rendered public/landing.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 93ms (Views: 83.0ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateCourses (20170419012557)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE TABLE "courses" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "price" float, "info" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170419012557"]]
+  [1m[35m (109.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+Started GET "/" for ::1 at 2017-04-19 09:29:05 +0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PublicController#landing as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering public/landing.html.erb within layouts/application
+  Rendered public/landing.html.erb within layouts/application (5.0ms)
+Completed 500 Internal Server Error in 754ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"courses"} missing required keys: [:id]):
+    13:   	<h1>Welcome, <%= current_user.name %>!</h1>
+    14:   	<%= link_to "Users", users_path %>
+    15:   	<%= link_to "Home" %>
+    16:   	<%= link_to "Courses", course_path %>
+    17:   	<%= link_to "Log out", logout_path, method: :delete %>
+    18:   <% else %>
+    19:   	<%= link_to "Log in", login_path %>
+  
+app/views/layouts/application.html.erb:16:in `_app_views_layouts_application_html_erb__109012335_57631980'
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.0ms)
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (481.0ms)
+Started GET "/" for ::1 at 2017-04-19 09:29:32 +0800
+Processing by PublicController#landing as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering public/landing.html.erb within layouts/application
+  Rendered public/landing.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 90ms (Views: 79.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/courses" for ::1 at 2017-04-19 09:29:45 +0800
+Processing by CoursesController#index as HTML
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  Rendered courses/index.html.erb within layouts/application (15.6ms)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 109ms (Views: 89.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/courses" for ::1 at 2017-04-19 09:31:24 +0800
+Processing by CoursesController#index as HTML
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  Rendered courses/index.html.erb within layouts/application (0.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 108ms (Views: 86.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/courses" for ::1 at 2017-04-19 09:31:26 +0800
+Processing by CoursesController#index as HTML
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (1.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  Rendered courses/index.html.erb within layouts/application (2.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 110ms (Views: 81.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/courses" for ::1 at 2017-04-19 09:32:28 +0800
+Processing by CoursesController#index as HTML
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  Rendered courses/index.html.erb within layouts/application (3.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 254ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `public_path' for #<#<Class:0x0000000bb92a70>:0x00000006c19db8>
+Did you mean?  public_method):
+    12:   <% if logged_in? %>
+    13:   	<h1>Welcome, <%= current_user.name %>!</h1>
+    14:   	<%= link_to "Users", users_path %>
+    15:   	<%= link_to "Home", public_path %>
+    16:   	<%= link_to "Courses", courses_path %>
+    17:   	<%= link_to "Log out", logout_path, method: :delete %>
+    18:   <% else %>
+  
+app/views/layouts/application.html.erb:15:in `_app_views_layouts_application_html_erb__109012335_56173740'
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.0ms)
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (463.0ms)
+Started GET "/courseslk" for ::1 at 2017-04-19 09:34:14 +0800
+  
+ActionController::RoutingError (No route matches [GET] "/courseslk"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered collection of c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [23 times] (7.0ms)
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (12.0ms)
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (649.0ms)
+Started GET "/courses" for ::1 at 2017-04-19 09:35:16 +0800
+Processing by CoursesController#index as HTML
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  Rendered courses/index.html.erb within layouts/application (4.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 113ms (Views: 101.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-04-19 09:35:17 +0800
+Processing by PublicController#landing as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering public/landing.html.erb within layouts/application
+  Rendered public/landing.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 90ms (Views: 81.7ms | ActiveRecord: 0.0ms)
+
+
+Started DELETE "/logout" for ::1 at 2017-04-19 09:35:49 +0800
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"8YTJYHZV1h079pbHaUxwKvCmHKNNBhYKqdije1mr3RgUb3S7+m6B997Chj+HAZOWSLcEmQBSpJVHVYy/ek501w=="}
+Redirected to http://localhost:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2017-04-19 09:35:49 +0800
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (13.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Completed 200 OK in 101ms (Views: 92.8ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/login" for ::1 at 2017-04-19 09:37:06 +0800
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nzvyu/UaCdSVteOfta1M12q9dSZX/d7aoM0yjZ2Nl3x60E9geSFePnCB82db4K9r0qxtHBqpbEVOQB1Jvmg+sw==", "session"=>{"email"=>"someemail2@example.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "someemail2@example.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 69ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-04-19 09:37:06 +0800
+Processing by PublicController#landing as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering public/landing.html.erb within layouts/application
+  Rendered public/landing.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 95ms (Views: 85.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-04-19 09:37:09 +0800
+Processing by PublicController#landing as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering public/landing.html.erb within layouts/application
+  Rendered public/landing.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 90ms (Views: 80.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2017-04-19 09:37:10 +0800
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 116ms (Views: 82.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/courses" for ::1 at 2017-04-19 09:37:15 +0800
+Processing by CoursesController#index as HTML
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  Rendered courses/index.html.erb within layouts/application (0.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 96ms (Views: 88.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/courses/new" for ::1 at 2017-04-19 09:37:18 +0800
+Processing by CoursesController#new as HTML
+  Rendering courses/new.html.erb within layouts/application
+  Rendered courses/_form.html.erb (0.0ms)
+  Rendered courses/new.html.erb within layouts/application (1.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 98ms (Views: 86.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/courses" for ::1 at 2017-04-19 09:37:49 +0800
+Processing by CoursesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HG6y9e6wkDRagz7wMNug3EoXuWK8NLgSyzyfDLmQZzGH/Ks9C6gy3r37Z2SzxQFfD2EL/nIWMwOVGPm+txAfDA==", "course"=>{"name"=>"Computing", "price"=>"$40", "info"=>"Everything to do with computing"}, "commit"=>"Create Course"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "courses" ("name", "price", "info", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Computing"], ["price", 0.0], ["info", "Everything to do with computing"], ["created_at", 2017-04-19 01:37:49 UTC], ["updated_at", 2017-04-19 01:37:49 UTC]]
+  [1m[35m (104.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/courses/1
+Completed 302 Found in 111ms (ActiveRecord: 104.0ms)
+
+
+Started GET "/courses/1" for ::1 at 2017-04-19 09:37:49 +0800
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCourse Load (0.0ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/show.html.erb within layouts/application (0.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 93ms (Views: 82.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/courses/1/edit" for ::1 at 2017-04-19 09:37:55 +0800
+Processing by CoursesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCourse Load (0.0ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering courses/edit.html.erb within layouts/application
+  Rendered courses/_form.html.erb (0.0ms)
+  Rendered courses/edit.html.erb within layouts/application (1.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 125ms (Views: 116.3ms | ActiveRecord: 0.0ms)
+
+
+Started PATCH "/courses/1" for ::1 at 2017-04-19 09:38:01 +0800
+Processing by CoursesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cTAp3ziPGO7Lq2ugQVNuyVs54RuMPwJYx+FIZEXCoyJiZXwv67VsAebJ/uzwn3YyOJplrZyCNn1dfioss016ZA==", "course"=>{"name"=>"Computing", "price"=>"40.00", "info"=>"Everything to do with computing"}, "commit"=>"Update Course", "id"=>"1"}
+  [1m[36mCourse Load (0.0ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[33mUPDATE "courses" SET "price" = ?, "updated_at" = ? WHERE "courses"."id" = ?[0m  [["price", 40.0], ["updated_at", 2017-04-19 01:38:01 UTC], ["id", 1]]
+  [1m[35m (151.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/courses/1
+Completed 302 Found in 158ms (ActiveRecord: 151.0ms)
+
+
+Started GET "/courses/1" for ::1 at 2017-04-19 09:38:01 +0800
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCourse Load (1.0ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/show.html.erb within layouts/application (1.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 90ms (Views: 81.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/courses" for ::1 at 2017-04-19 09:38:13 +0800
+Processing by CoursesController#index as HTML
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  Rendered courses/index.html.erb within layouts/application (3.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 90ms (Views: 82.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-04-19 09:38:35 +0800
+Processing by PublicController#landing as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering public/landing.html.erb within layouts/application
+  Rendered public/landing.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 112ms (Views: 83.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-04-19 10:49:05 +0800
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.0.2) lib/active_record/migration.rb:573:in `check_pending!'
+activerecord (5.0.2) lib/active_record/migration.rb:549:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.2) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.2) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.2) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.5.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (1.0ms)
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (475.0ms)
+  [1m[35m (78.0ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) PRIMARY KEY) ENGINE=InnoDB[0m
+  [1m[35m (78.0ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) PRIMARY KEY, `value` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (46.8ms)[0m  [1m[34mSELECT DATABASE() as db[0m
+  [1m[35m (62.4ms)[0m  [1m[34mSELECT GET_LOCK('115005207205258965', 0);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (62.4ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateUsers (20170404062939)
+  [1m[35m (93.6ms)[0m  [1m[35mCREATE TABLE `users` (`id` int AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `email` varchar(255), `password_digest` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (78.0ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_users_on_email`  ON `users` (`email`) [0m
+  [1m[35m (62.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (62.4ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20170404062939')[0m
+  [1m[35m (62.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateCourses (20170419012557)
+  [1m[35m (78.0ms)[0m  [1m[35mCREATE TABLE `courses` (`id` int AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `price` float, `info` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (62.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (62.4ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20170419012557')[0m
+  [1m[35m (62.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (46.8ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (62.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (62.4ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2017-04-19 02:49:31', '2017-04-19 02:49:31')[0m
+  [1m[35m (62.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (62.4ms)[0m  [1m[34mSELECT RELEASE_LOCK('115005207205258965')[0m
+  [1m[36mActiveRecord::SchemaMigration Load (46.8ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (46.8ms)[0m  [1m[35mSHOW CREATE TABLE `courses`[0m
+  [1m[35m (62.4ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'courses'[0m
+  [1m[35m (62.4ms)[0m  [1m[35mSHOW CREATE TABLE `users`[0m
+  [1m[35m (46.8ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'users'[0m
+Started GET "/" for ::1 at 2017-04-19 10:49:41 +0800
+  [1m[36mActiveRecord::SchemaMigration Load (58.0ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by PublicController#landing as HTML
+  [1m[36mUser Load (58.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  Rendering public/landing.html.erb within layouts/application
+  Rendered public/landing.html.erb within layouts/application (2.0ms)
+  [1m[36mUser Load (60.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed 200 OK in 558ms (Views: 356.1ms | ActiveRecord: 178.0ms)
+
+
+Started GET "/login" for ::1 at 2017-04-19 10:49:55 +0800
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (15.6ms)
+  [1m[36mUser Load (62.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed 200 OK in 172ms (Views: 94.8ms | ActiveRecord: 62.4ms)
+
+
+Started POST "/login" for ::1 at 2017-04-19 10:50:04 +0800
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GUu4ucNkoI9wsfsWyc3eFKm13zs+WRov0Smyw5cpMOk4Fvv8dbWK74fluQ5Pqt8yNghzKmhGGzQLe2sUG952VA==", "session"=>{"email"=>"someemail2@example.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (63.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'someemail2@example.com' LIMIT 1[0m
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.0ms)
+  [1m[36mUser Load (58.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed 200 OK in 209ms (Views: 85.2ms | ActiveRecord: 121.0ms)
+
+
+Started POST "/login" for ::1 at 2017-04-19 10:50:13 +0800
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1a98nYdnNPnbLVy+UG2N/r/CAZMhCDdB66sJOPOp0cAwRMFGC1xjEz4ZTEa+IG5CB9MZqWxchd4FJib80Ex4Dw==", "session"=>{"email"=>"someemail2@example.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (58.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'someemail2@example.com' LIMIT 1[0m
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.0ms)
+  [1m[36mUser Load (57.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed 200 OK in 209ms (Views: 92.5ms | ActiveRecord: 115.0ms)
+
+
+Started GET "/users" for ::1 at 2017-04-19 10:50:46 +0800
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (58.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Redirected to http://localhost:3000/login
+Filter chain halted as :authenticate_user rendered or redirected
+Completed 302 Found in 60ms (ActiveRecord: 58.0ms)
+
+
+Started GET "/login" for ::1 at 2017-04-19 10:50:47 +0800
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.0ms)
+  [1m[36mUser Load (58.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed 200 OK in 151ms (Views: 85.8ms | ActiveRecord: 58.0ms)
+
+
+Started POST "/login" for ::1 at 2017-04-19 10:51:02 +0800
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wfJoVM1yUzHMq7ftD/ol+98mNo8NozVZo++8Sr75d4AkGdWPQUkE2ymfpxXht8ZHZzcutUD3h8ZNYpOOnRzeTw==", "session"=>{"email"=>"someemail2@example.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (58.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'someemail2@example.com' LIMIT 1[0m
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.0ms)
+  [1m[36mUser Load (58.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed 200 OK in 204ms (Views: 85.6ms | ActiveRecord: 116.0ms)
+
+
+Started POST "/login" for ::1 at 2017-04-19 10:52:04 +0800
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"y5su/03YNVusToOJnEU+lITELp+yawLkStoZM47iwvkucJMkweNisUl6k3FyCN0oPNU2pf8/sHukVzb3rQdrNg==", "session"=>{"email"=>"someemail2@example.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (61.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'someemail2@example.com' LIMIT 1[0m
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.0ms)
+  [1m[36mUser Load (61.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed 200 OK in 206ms (Views: 82.0ms | ActiveRecord: 122.0ms)
+
+
+Started POST "/login" for ::1 at 2017-04-19 10:53:34 +0800
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JNWuq/L0GSHFdf5bcvNzOBp6bBQ3X8MYpQqhCc5mAonBPhNwfs9OyyBB7qOcvpCEomt0LnoLcYdLh47N7YOrRg==", "session"=>{"email"=>"someemail2@example.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (57.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'someemail2@example.com' LIMIT 1[0m
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.0ms)
+  [1m[36mUser Load (58.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed 200 OK in 208ms (Views: 90.4ms | ActiveRecord: 115.0ms)
+
+
+Started POST "/login" for ::1 at 2017-04-19 10:53:52 +0800
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"P4IxjQlJ6gZW5LHSclqwwpzf7g+ym5GKZtd9Q29a03PaaYxWhXK97LPQoSqcF1N+JM72Nf/PIxWIWlKHTL96vA==", "session"=>{"email"=>"someemail2@example.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (58.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'someemail2@example.com' LIMIT 1[0m
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.0ms)
+  [1m[36mUser Load (59.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed 200 OK in 202ms (Views: 83.5ms | ActiveRecord: 117.0ms)
+
+
+  [1m[35m (62.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (63.4ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = 'testemail@fake.com' LIMIT 1[0m
+  [1m[35m (62.4ms)[0m  [1m[31mROLLBACK[0m
+Started GET "/login" for ::1 at 2017-04-19 11:25:31 +0800
+  [1m[36mActiveRecord::SchemaMigration Load (56.0ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (25.0ms)
+  [1m[36mUser Load (56.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed 200 OK in 513ms (Views: 382.6ms | ActiveRecord: 114.0ms)
+
+
+Started POST "/login" for ::1 at 2017-04-19 11:26:00 +0800
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OvGGKtHpPAN4lj8EYrX4L1RjvPwvG4Ph2X2Bq3c29Z3fGjvxXdJr6Z2iL/yM+BuT7HKkxmJPMX438K5vVNNcUg==", "session"=>{"email"=>"testemail@fake.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (58.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'testemail@fake.com' LIMIT 1[0m
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.0ms)
+  [1m[36mUser Load (59.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed 200 OK in 202ms (Views: 82.6ms | ActiveRecord: 117.0ms)
+
+
+Started POST "/login" for ::1 at 2017-04-19 11:27:03 +0800
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/Z1fFx+v7qWKyIK8iIPjei15kmk24KNX+dMXNOEKxkMYduLMk5S5T2/8kkRmzgDGlWiKU3u0EcgXXjjwwu9vjA==", "session"=>{"email"=>"testemail@fake.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (58.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'testemail@fake.com' LIMIT 1[0m
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.0ms)
+  [1m[36mUser Load (58.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed 200 OK in 202ms (Views: 83.8ms | ActiveRecord: 116.0ms)
+
+
+Started POST "/login" for ::1 at 2017-04-19 11:27:26 +0800
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"B8NoE3I2Nxzoq9Drr4iHXx9Pvm6PYkis35/1zmylXAbiKNXI/g1g9g2fwBNBxWTjp16mVMI2+jMxEtoKT0D1yQ==", "session"=>{"email"=>"testemail@fake.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (62.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'testemail@fake.com' LIMIT 1[0m
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.0ms)
+  [1m[36mUser Load (57.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed 200 OK in 214ms (Views: 93.0ms | ActiveRecord: 119.0ms)
+
+
+Started POST "/login" for ::1 at 2017-04-19 11:27:56 +0800
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"57OJCMIbsOTHuewMwaKELb8c8lSNfbZ+cDf7UcVErYQCWDTTTiDnDiKN/PQv72eRBw3qbsApBOGeutSV5qEESw==", "session"=>{"email"=>"testemail@fake.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (57.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'testemail@fake.com' LIMIT 1[0m
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.0ms)
+  [1m[36mUser Load (57.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed 200 OK in 202ms (Views: 85.0ms | ActiveRecord: 114.0ms)
+
+
+  [1m[35m (62.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (62.4ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = 'testingemail@example.com' LIMIT 1[0m
+  [1m[35m (46.8ms)[0m  [1m[31mROLLBACK[0m
+Started GET "/login" for ::1 at 2017-04-19 11:31:26 +0800
+  [1m[36mActiveRecord::SchemaMigration Load (65.0ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (26.0ms)
+  [1m[36mUser Load (58.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed 200 OK in 516ms (Views: 381.4ms | ActiveRecord: 117.0ms)
+
+
+Started POST "/login" for ::1 at 2017-04-19 11:31:54 +0800
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yVfE8Yf9vXOXh3ABd0DKbOFC89NrSdRJhNuFjcP19EUsvHkqC8bqmXKzYPmZDSnQWVPr6SYdZtZqVqpJ4BBdig==", "session"=>{"email"=>"testingemail@example.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (58.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'testingemail@example.com' LIMIT 1[0m
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.0ms)
+  [1m[36mUser Load (58.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed 200 OK in 203ms (Views: 84.2ms | ActiveRecord: 116.0ms)
+
+
+Started POST "/login" for ::1 at 2017-04-19 11:32:06 +0800
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vJnvkKFyD1F7EZPWdj03DoJmCr0zumjVELz6NKfpnmVZclJLLUlYu54lgy6YcNSyOncSh37u2kr+MdXwhAw3qg==", "session"=>{"email"=>"testingemail@example.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (58.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'testingemail@example.com' LIMIT 1[0m
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.0ms)
+  [1m[36mUser Load (59.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed 200 OK in 200ms (Views: 82.2ms | ActiveRecord: 117.0ms)
+
+
+  [1m[35m (78.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (62.4ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = 'dummyemail@fake.com' LIMIT 1[0m
+  [1m[35mSQL (62.4ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `password_digest`, `created_at`, `updated_at`) VALUES ('test', 'dummyemail@fake.com', '$2a$10$h.zDFpz52k8Og9o6Asxn7eSW1sOv88tKm0EpRXzsFrBWnAzZ0JCYW', '2017-04-19 03:34:31', '2017-04-19 03:34:31')[0m
+  [1m[35m (62.4ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/login" for ::1 at 2017-04-19 11:35:07 +0800
+  [1m[36mActiveRecord::SchemaMigration Load (57.0ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (24.0ms)
+  [1m[36mUser Load (58.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed 200 OK in 638ms (Views: 386.4ms | ActiveRecord: 235.0ms)
+
+
+Started POST "/login" for ::1 at 2017-04-19 11:35:32 +0800
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3q8NcI6pVYDTxVYTC+ipFOmwgPcX/lL3PeDl3pH94qQ7RLCrApICajbxRuvlpUqoUaGYzVqq4GjTbcoashhLaw==", "session"=>{"email"=>"dummyemail@fake.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (58.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'dummyemail@fake.com' LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 126ms (ActiveRecord: 58.0ms)
+
+
+Started GET "/" for ::1 at 2017-04-19 11:35:33 +0800
+Processing by PublicController#landing as HTML
+  [1m[36mUser Load (57.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  Rendering public/landing.html.erb within layouts/application
+  Rendered public/landing.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 145ms (Views: 77.8ms | ActiveRecord: 57.0ms)
+
+
+Started GET "/users" for ::1 at 2017-04-19 11:35:45 +0800
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (47.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (80.0ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  Rendered users/index.html.erb within layouts/application (81.0ms)
+Completed 200 OK in 210ms (Views: 61.4ms | ActiveRecord: 127.8ms)
+
+
+Started GET "/" for ::1 at 2017-04-19 11:36:31 +0800
+Processing by PublicController#landing as HTML
+  [1m[36mUser Load (62.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  Rendering public/landing.html.erb within layouts/application
+  Rendered public/landing.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 144ms (Views: 93.9ms | ActiveRecord: 62.4ms)
+
+
+Started GET "/courses" for ::1 at 2017-04-19 11:36:33 +0800
+Processing by CoursesController#index as HTML
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (86.0ms)[0m  [1m[34mSELECT `courses`.* FROM `courses`[0m
+  Rendered courses/index.html.erb within layouts/application (149.4ms)
+  [1m[36mUser Load (46.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed 200 OK in 292ms (Views: 70.4ms | ActiveRecord: 195.2ms)
+
+
+Started GET "/" for ::1 at 2017-04-19 11:36:36 +0800
+Processing by PublicController#landing as HTML
+  [1m[36mUser Load (86.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  Rendering public/landing.html.erb within layouts/application
+  Rendered public/landing.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 176ms (Views: 82.7ms | ActiveRecord: 86.2ms)
+
+
+Started GET "/courses" for ::1 at 2017-04-19 11:49:44 +0800
+Processing by CoursesController#index as HTML
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (82.4ms)[0m  [1m[34mSELECT `courses`.* FROM `courses`[0m
+  Rendered courses/index.html.erb within layouts/application (83.4ms)
+  [1m[36mUser Load (48.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed 200 OK in 239ms (Views: 71.4ms | ActiveRecord: 131.2ms)
+
+
+Started GET "/" for ::1 at 2017-04-19 11:49:46 +0800
+Processing by PublicController#landing as HTML
+  [1m[36mUser Load (62.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  Rendering public/landing.html.erb within layouts/application
+  Rendered public/landing.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 166ms (Views: 85.6ms | ActiveRecord: 62.4ms)
+
+
+Started DELETE "/logout" for ::1 at 2017-04-19 11:49:49 +0800
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"fNswYhE3uw+RLgv2iRHI3+iAhqtsw47MKQ4coJoOVL2ZMI25nQzs5XQaGw5nXCtjUJGekSGXPFPHgzNkuev9cg=="}
+Redirected to http://localhost:3000/login
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2017-04-19 11:49:49 +0800
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.0ms)
+  [1m[36mUser Load (57.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+Completed 200 OK in 150ms (Views: 85.3ms | ActiveRecord: 57.0ms)
+
+
+Started POST "/login" for ::1 at 2017-04-19 11:50:03 +0800
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"oNV4VwZZeyxmrhzNYXHR78iZweMW2gr5NKEiLqTS4sdFPsWMimIsxoOaDDWPPDJTcIjZ2VuOuGbaLA3qhzdLCA==", "session"=>{"email"=>"dummyemail@fake.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (57.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'dummyemail@fake.com' LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 127ms (ActiveRecord: 57.0ms)
+
+
+Started GET "/" for ::1 at 2017-04-19 11:50:03 +0800
+Processing by PublicController#landing as HTML
+  [1m[36mUser Load (58.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  Rendering public/landing.html.erb within layouts/application
+  Rendered public/landing.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 148ms (Views: 80.6ms | ActiveRecord: 58.0ms)
+
+
+Started GET "/courses" for ::1 at 2017-04-19 11:56:54 +0800
+Processing by CoursesController#index as HTML
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (91.4ms)[0m  [1m[34mSELECT `courses`.* FROM `courses`[0m
+  Rendered courses/index.html.erb within layouts/application (92.4ms)
+  [1m[36mUser Load (62.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed 200 OK in 240ms (Views: 58.6ms | ActiveRecord: 153.8ms)
+
+
+Started GET "/courses/new" for ::1 at 2017-04-19 11:56:58 +0800
+Processing by CoursesController#new as HTML
+  Rendering courses/new.html.erb within layouts/application
+  Rendered courses/_form.html.erb (0.0ms)
+  Rendered courses/new.html.erb within layouts/application (0.0ms)
+  [1m[36mUser Load (62.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed 200 OK in 237ms (Views: 91.9ms | ActiveRecord: 143.6ms)
+
+
+Started POST "/courses" for ::1 at 2017-04-19 11:57:31 +0800
+Processing by CoursesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LaBjPpBt430swiQDmFh24SGAylr7ng01Ma3Os7Fsv5K2Mnr2dXVBl8u6fZcbRtdiZPZ4xjW8hiRviagBv+zHrw==", "course"=>{"name"=>"Persona 5", "price"=>"23456789", "info"=>"Phantom Thieves"}, "commit"=>"Create Course"}
+  [1m[35m (57.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (61.0ms)[0m  [1m[32mINSERT INTO `courses` (`name`, `price`, `info`, `created_at`, `updated_at`) VALUES ('Persona 5', 23456789.0, 'Phantom Thieves', '2017-04-19 03:57:31', '2017-04-19 03:57:31')[0m
+  [1m[35m (63.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/courses/1
+Completed 302 Found in 188ms (ActiveRecord: 181.0ms)
+
+
+Started GET "/courses/1" for ::1 at 2017-04-19 11:57:31 +0800
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCourse Load (58.0ms)[0m  [1m[34mSELECT  `courses`.* FROM `courses` WHERE `courses`.`id` = 1 LIMIT 1[0m
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/show.html.erb within layouts/application (1.0ms)
+  [1m[36mUser Load (61.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed 200 OK in 221ms (Views: 80.3ms | ActiveRecord: 119.0ms)
+
+
+Started GET "/courses" for ::1 at 2017-04-19 11:58:11 +0800
+Processing by CoursesController#index as HTML
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (82.4ms)[0m  [1m[34mSELECT `courses`.* FROM `courses`[0m
+  Rendered courses/index.html.erb within layouts/application (82.4ms)
+  [1m[36mUser Load (46.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed 200 OK in 195ms (Views: 80.4ms | ActiveRecord: 128.4ms)
+
+
+Started GET "/" for ::1 at 2017-04-19 11:59:23 +0800
+Processing by PublicController#landing as HTML
+  [1m[36mUser Load (43.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  Rendering public/landing.html.erb within layouts/application
+  Rendered public/landing.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 152ms (Views: 82.9ms | ActiveRecord: 43.0ms)
+
+
+Started GET "/courses" for ::1 at 2017-04-19 11:59:32 +0800
+Processing by CoursesController#index as HTML
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (36.6ms)[0m  [1m[34mSELECT `courses`.* FROM `courses`[0m
+  Rendered courses/index.html.erb within layouts/application (38.6ms)
+  [1m[36mUser Load (46.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed 200 OK in 231ms (Views: 124.8ms | ActiveRecord: 83.4ms)
+
+
+Started GET "/courses" for ::1 at 2017-04-19 12:03:45 +0800
+  [1m[36mActiveRecord::SchemaMigration Load (58.0ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.0.2) lib/active_record/migration.rb:573:in `check_pending!'
+activerecord (5.0.2) lib/active_record/migration.rb:549:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.2) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.2) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.2) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.5.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (1.0ms)
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendering c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered c:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (476.0ms)
+  [1m[35m (46.8ms)[0m  [1m[34mSELECT DATABASE() as db[0m
+  [1m[35m (62.4ms)[0m  [1m[34mSELECT GET_LOCK('115005207205258965', 0);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (46.8ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateContents (20170419040221)
+  [1m[35m (109.2ms)[0m  [1m[35mCREATE TABLE `contents` (`id` int AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `content` varchar(255), `course_id` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL,  INDEX `index_contents_on_course_id`  (`course_id`), CONSTRAINT `fk_rails_b88ee596dc`
+FOREIGN KEY (`course_id`)
+  REFERENCES `courses` (`id`)
+) ENGINE=InnoDB[0m
+  [1m[35m (62.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (46.8ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20170419040221')[0m
+  [1m[35m (62.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (62.4ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (46.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (62.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (62.4ms)[0m  [1m[34mSELECT RELEASE_LOCK('115005207205258965')[0m
+  [1m[36mActiveRecord::SchemaMigration Load (62.4ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (62.4ms)[0m  [1m[35mSHOW CREATE TABLE `contents`[0m
+  [1m[35m (62.4ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'contents'[0m
+  [1m[35m (62.4ms)[0m  [1m[35mSHOW CREATE TABLE `courses`[0m
+  [1m[35m (62.4ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'courses'[0m
+  [1m[35m (62.4ms)[0m  [1m[35mSHOW CREATE TABLE `users`[0m
+  [1m[35m (62.4ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'users'[0m
+Started GET "/courses" for ::1 at 2017-04-19 12:04:10 +0800
+  [1m[36mActiveRecord::SchemaMigration Load (56.0ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by CoursesController#index as HTML
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (56.0ms)[0m  [1m[34mSELECT `courses`.* FROM `courses`[0m
+  Rendered courses/index.html.erb within layouts/application (238.0ms)
+  [1m[36mUser Load (56.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed 200 OK in 1162ms (Views: 720.1ms | ActiveRecord: 400.0ms)
+
+
+Started PUT "/__web_console/repl_sessions/5bf55191dab74019247eb6c146e8b098" for ::1 at 2017-04-19 12:04:30 +0800
+Started PUT "/__web_console/repl_sessions/5bf55191dab74019247eb6c146e8b098" for ::1 at 2017-04-19 12:04:31 +0800
+Started PUT "/__web_console/repl_sessions/5bf55191dab74019247eb6c146e8b098" for ::1 at 2017-04-19 12:04:32 +0800
+  [1m[36mCourse Load (62.4ms)[0m  [1m[34mSELECT  `courses`.* FROM `courses` ORDER BY `courses`.`id` ASC LIMIT 1[0m
+Started PUT "/__web_console/repl_sessions/5bf55191dab74019247eb6c146e8b098" for ::1 at 2017-04-19 12:04:36 +0800
+Started PUT "/__web_console/repl_sessions/5bf55191dab74019247eb6c146e8b098" for ::1 at 2017-04-19 12:04:38 +0800
+  [1m[36mContent Load (62.4ms)[0m  [1m[34mSELECT `contents`.* FROM `contents` WHERE `contents`.`course_id` = 1[0m
+Started PUT "/__web_console/repl_sessions/5bf55191dab74019247eb6c146e8b098" for ::1 at 2017-04-19 12:04:45 +0800
+Started PUT "/__web_console/repl_sessions/5bf55191dab74019247eb6c146e8b098" for ::1 at 2017-04-19 12:04:54 +0800
+Started PUT "/__web_console/repl_sessions/5bf55191dab74019247eb6c146e8b098" for ::1 at 2017-04-19 12:05:10 +0800
+Started PUT "/__web_console/repl_sessions/5bf55191dab74019247eb6c146e8b098" for ::1 at 2017-04-19 12:05:16 +0800
+  [1m[35m (62.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (62.4ms)[0m  [1m[32mINSERT INTO `contents` (`name`, `content`, `course_id`, `created_at`, `updated_at`) VALUES ('Maya', 'Character from Persona 2', 1, '2017-04-19 04:05:17', '2017-04-19 04:05:17')[0m
+  [1m[35m (93.6ms)[0m  [1m[35mCOMMIT[0m
+Started PUT "/__web_console/repl_sessions/5bf55191dab74019247eb6c146e8b098" for ::1 at 2017-04-19 12:05:44 +0800
+Started PUT "/__web_console/repl_sessions/5bf55191dab74019247eb6c146e8b098" for ::1 at 2017-04-19 12:05:45 +0800
+  [1m[36mContent Load (62.4ms)[0m  [1m[34mSELECT  `contents`.* FROM `contents` ORDER BY `contents`.`id` ASC LIMIT 1[0m
+Started PUT "/__web_console/repl_sessions/5bf55191dab74019247eb6c146e8b098" for ::1 at 2017-04-19 12:05:47 +0800
+Started PUT "/__web_console/repl_sessions/5bf55191dab74019247eb6c146e8b098" for ::1 at 2017-04-19 12:05:48 +0800
+Started PUT "/__web_console/repl_sessions/5bf55191dab74019247eb6c146e8b098" for ::1 at 2017-04-19 12:05:51 +0800
+Started PUT "/__web_console/repl_sessions/5bf55191dab74019247eb6c146e8b098" for ::1 at 2017-04-19 12:05:52 +0800
+  [1m[36mCourse Load (62.4ms)[0m  [1m[34mSELECT  `courses`.* FROM `courses` WHERE `courses`.`id` = 1 LIMIT 1[0m
+Started GET "/courses" for ::1 at 2017-04-19 12:06:12 +0800
+Processing by CoursesController#index as HTML
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (58.0ms)[0m  [1m[34mSELECT `courses`.* FROM `courses`[0m
+  Rendered courses/index.html.erb within layouts/application (60.0ms)
+  [1m[36mUser Load (55.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed 200 OK in 211ms (Views: 89.2ms | ActiveRecord: 113.0ms)
+
+
+Started GET "/courses" for ::1 at 2017-04-19 12:06:48 +0800
+Processing by CoursesController#index as HTML
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (56.0ms)[0m  [1m[34mSELECT `courses`.* FROM `courses`[0m
+  Rendered courses/index.html.erb within layouts/application (234.0ms)
+  [1m[36mUser Load (56.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed 200 OK in 508ms (Views: 100.7ms | ActiveRecord: 397.0ms)
+
+
+Started GET "/" for ::1 at 2017-04-19 12:06:50 +0800
+Processing by PublicController#landing as HTML
+  [1m[36mUser Load (77.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  Rendering public/landing.html.erb within layouts/application
+  Rendered public/landing.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 171ms (Views: 84.5ms | ActiveRecord: 77.4ms)
+
+
