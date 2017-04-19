@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :contents
+  resources :courses
+  
   root to: 'public#landing'
 
   get 'sessions/new'
